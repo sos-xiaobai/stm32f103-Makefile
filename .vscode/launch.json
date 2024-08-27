@@ -1,0 +1,19 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Jlink Debug",
+            "cwd": "${workspaceFolder}", //这里是你的工程路径 current working directory
+            "executable": "./build/666.elf", //这里是你的elf文件路径
+            "request": "launch",
+            "type": "cortex-debug",
+            "runToEntryPoint": "main", //这里是你的入口函数
+            "servertype": "jlink", //这里是你的调试器类型
+            "device": "STM32F103C8", //这里是你的芯片型号
+            "svdFile": "${workspaceFolder}/STM32F103.svd", //这里是你的svd文件路径
+        }
+    ]
+}

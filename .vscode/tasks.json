@@ -1,0 +1,41 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build task",         // 任务标签
+            "type": "shell",               // 任务类型,因为要调用make,是在终端(CMD)里运行的,所以是shell任务
+            "command": "make -j24",// 要执行的任务命令
+            "problemMatcher": [],          
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }            
+        },
+        {
+            "label": "clean task",
+            "type": "shell",
+            "command": "make clean",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "download task",
+            "type": "shell",
+            "command": "powershell",
+            "args": [
+                "-Command",
+                "Start-Process 'C:\\Program Files (x86)\\SEGGER\\JLink_V722b\\JLink.exe' -ArgumentList '${workspaceFolder}\\Jlink_Config.txt'"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [],
+            "detail": "Flash the firmware to the target device using J-Link"
+        }
+    ]
+}

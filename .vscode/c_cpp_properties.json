@@ -1,0 +1,32 @@
+// This file is used to configure the IntelliSense engine for C++.
+{
+    "configurations": [
+        {
+            "name": "STM32",
+            "browse": {
+                "path": [
+                    "${workspaceFolder}/**"
+                ],
+                "limitSymbolsToIncludedHeaders": true
+            },
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/Core/Inc",
+                "${workspaceFolder}/Drivers/CMSIS/Device/ST/STM32F1xx/Include",
+                "${workspaceFolder}/Drivers/CMSIS/Include",
+                "${workspaceFolder}/Drivers/STM32F1xx_HAL_Driver/Inc",
+                "${workspaceFolder}/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy",
+                "${workspaceFolder}/user/inc"
+            ],
+            "defines": [
+                "STM32F103xB",
+                "USE_HAL_DRIVER"
+            ],
+            "compilerPath": "D:\\ARM GNU TOOLCHAIN ARM-NONE-EABI\\BIN\\ARM-NONE-EABI-GCC.EXE",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "gcc-x64"
+        }
+    ],
+    "version": 4
+}

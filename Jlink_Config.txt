@@ -1,0 +1,6 @@
+usb 0
+si 1
+h
+speed 4000
+device STM32F103C8
+loadbin Release.bin 0x08000000
